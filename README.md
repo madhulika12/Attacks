@@ -3,6 +3,8 @@ Attacks
 
 Injection, DoS and Scanning
 
+MODIFICATIONS 54 - 
+
 -In order to write to the slave PLC, I have to write in the location where the master PLC would write, so I've got the master PLC commented out of the shell script. This will probably change later when I reincorporate the master PLC
 -For some reason, for any 1 bit data item I request from the slave PLC through iFix's MBE driver, it subtracts 1 bit from the address I give it. In order to compensate for this, I added 1 to every address I needed for 1 bit data items. The floats(2-bit) seem to work fine. Le weird.
 
