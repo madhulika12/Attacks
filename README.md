@@ -14,7 +14,7 @@ Injection, DoS and Scanning
 
 -I edited the config file such that the SP starts up as 5.0 instead of 10.0.
 
--for Wei's attacks, I'mn using some serial-to-MODBUS converter code. Looks like I need to run "./mtu.out localhost". Right now, mtu.c is setup to listen on ttyS2. The attack code needs to be setup for it's output to be ttyS1. These are physical ports right now.
+-for Wei's attacks, I'm using some serial-to-MODBUS converter code. Looks like I need to run "./mtu.out localhost". Right now, mtu.c is setup to listen on ttyS2. The attack code needs to be setup for it's output to be ttyS1. These are physical ports right now.
 
 -the serial-to-tcp converter is setup using the mtu.c. The attacks(which are mostly serial) write to serial port 2(which is setup as the client in VMWARE) and the mtu.c converter reads from serial port 3. It then converts this and connects to the IP address 10.128.0.1 port 502 and sends the serial data as TCP packets.
 
